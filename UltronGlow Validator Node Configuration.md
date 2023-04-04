@@ -29,19 +29,19 @@ Instructions for configurating a Validator Node on the UltronGlow Network.
 # yum upgrade -y
 ```
 
-## Deploy time synchronization
+### Deploy time synchronization
 
 ```bash
 # yum -y install chrony
 ```
 
-## Start time synchronization
+### Start time synchronization
 
 ```bash
 # systemctl start chronyd
 ```
 
-## Check time syncronization status
+### Check time syncronization status
 
 ```bash
 # systemctl status chronyd
@@ -49,7 +49,7 @@ Instructions for configurating a Validator Node on the UltronGlow Network.
 
 ![Alt text](check_time_synchronization.png)
 
-## Udpate System Language
+### Udpate System Language
 
 ```bash
 # sudo vim /etc/default/locale
