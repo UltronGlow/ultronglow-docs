@@ -1,4 +1,4 @@
-# UlutronGlow Validator Node Configuration
+# UltronGlow Validator Node Configuration
 
 Instructions for configurating a Validator Node on the UltronGlow Network.
 
