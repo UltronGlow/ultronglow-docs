@@ -73,19 +73,19 @@ locale-gen -en_US:en
 
 ## 3 - Deploy the Node
 
-Create the data directory
+### Create the data directory
 
 ```bash
 # mkdir -p /data/utg/data
 ```
 
-Copy the compiled node program to the directory
+### Copy the compiled node program to the directory
 
 ```bash
 # cp -r /data/devent/UltronGlow-Origin/build/bin /data/utg/
 ```
 
-Generate the miner address keystore file in the `/data/utg/data/keystore` directory
+### Generate the miner address keystore file in the `/data/utg/data/keystore` directory
 
 ```bash
 # cd /data/utg
@@ -96,7 +96,7 @@ Generate the miner address keystore file in the `/data/utg/data/keystore` direct
 
 **Make sure to generate your own password instead of `keypassword` and don't forget it!**
 
-Write the password for the key file to the `/data/utg/data/password.txt` file.
+### Write the password for the key file to the `/data/utg/data/password.txt` file.
 
 ```bash
 # echo 'keypassword' > /data/utg/data/password.txt
@@ -104,7 +104,7 @@ Write the password for the key file to the `/data/utg/data/password.txt` file.
 
 ## 4 - Create the UltronGlow Startup Service
 
-1. Start synchronous node mining
+### Start synchronous node mining
    
    ```bash
    # vim /lib/systemd/system/utgchain.service
@@ -133,7 +133,7 @@ Write the password for the key file to the `/data/utg/data/password.txt` file.
     WantedBy=multi-user.target
    ```
 
-2. Miner node
+### Miner node
    ```bash
    # vim /lib/systemd/system/utgchain.service
    ```
@@ -163,19 +163,19 @@ Write the password for the key file to the `/data/utg/data/password.txt` file.
 
 ## 5 - Start UltronGlow Node Service
 
-Create a self-starting node service
+### Create a self-starting node service
 
 ```bash
 # systemctl enable utgchain
 ```
 
-Start the node service
+### Start the node service
 
 ```bash
 # systemctl start utgchain
 ```
 
-Query the service running status
+### Query the service running status
 
 ```bash
 # systemctl status utgchain
@@ -183,13 +183,13 @@ Query the service running status
 
 ## 6 - Console Check
 
-Enter the JavaScript console
+## Enter the JavaScript console
 
 ```bash
 # ./bin/utg attach data/utg.ipc
 ```
 
-Check the sync status
+### Check the sync status
 
 ```
 > eth.syncing
